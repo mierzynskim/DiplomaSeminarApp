@@ -1,0 +1,9 @@
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\DiplomaSeminar.Core.dll
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\DiplomaSeminar.Core.pdb
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\SQLite.Net.Async.dll
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\SQLite.Net.dll
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\obj\Debug\DiplomaSeminar.Core.dll
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\obj\Debug\DiplomaSeminar.Core.pdb
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Core\obj\Debug\DiplomaSeminar.Core.csprojResolveAssemblyReference.cache
