@@ -28,25 +28,30 @@ public final class R {
     public static final class id {
         public static final int date=0x7f080003;
         public static final int lastName=0x7f080002;
-        public static final int menu_new_presentation=0x7f080005;
-        public static final int menu_refresh=0x7f080006;
+        public static final int menu_new_presentation=0x7f080008;
+        public static final int menu_refresh=0x7f080009;
+        public static final int menu_save_presentation=0x7f080007;
         public static final int name=0x7f080001;
-        public static final int progressBar=0x7f080004;
+        public static final int progressBar=0x7f080006;
         public static final int subject=0x7f080000;
+        public static final int textView1=0x7f080004;
+        public static final int textView3=0x7f080005;
     }
     public static final class layout {
         public static final int item_presentation=0x7f030000;
         public static final int main=0x7f030001;
-        public static final int view_presentations=0x7f030002;
+        public static final int view_add=0x7f030002;
+        public static final int view_presentations=0x7f030003;
     }
     public static final class menu {
-        public static final int menu_presentations=0x7f070000;
+        public static final int menu_add=0x7f070000;
+        public static final int menu_presentations=0x7f070001;
     }
     public static final class string {
         public static final int ApplicationName=0x7f040001;
         public static final int Hello=0x7f040000;
         public static final int menu_new_expense=0x7f040002;
         public static final int menu_refresh=0x7f040004;
-        public static final int menu_save_expense=0x7f040003;
+        public static final int menu_save_presentation=0x7f040003;
     }
 }

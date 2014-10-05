@@ -41,3 +41,6 @@ C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\menu\menu_
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\layout\view_add.xml
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\menu\menu_add.xml
+C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\drawable-xxxhdpi\ic_launcher.png

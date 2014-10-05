@@ -118,20 +118,29 @@ namespace DiplomaSeminar.Droid
 			// aapt resource value: 0x7f080002
 			public const int lastName = 2131230722;
 			
-			// aapt resource value: 0x7f080005
-			public const int menu_new_presentation = 2131230725;
+			// aapt resource value: 0x7f080008
+			public const int menu_new_presentation = 2131230728;
 			
-			// aapt resource value: 0x7f080006
-			public const int menu_refresh = 2131230726;
+			// aapt resource value: 0x7f080009
+			public const int menu_refresh = 2131230729;
+			
+			// aapt resource value: 0x7f080007
+			public const int menu_save_presentation = 2131230727;
 			
 			// aapt resource value: 0x7f080001
 			public const int name = 2131230721;
 			
-			// aapt resource value: 0x7f080004
-			public const int progressBar = 2131230724;
+			// aapt resource value: 0x7f080006
+			public const int progressBar = 2131230726;
 			
 			// aapt resource value: 0x7f080000
 			public const int subject = 2131230720;
+			
+			// aapt resource value: 0x7f080004
+			public const int textView1 = 2131230724;
+			
+			// aapt resource value: 0x7f080005
+			public const int textView3 = 2131230725;
 			
 			static Id()
 			{
@@ -153,7 +162,10 @@ namespace DiplomaSeminar.Droid
 			public const int Main = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int view_presentations = 2130903042;
+			public const int view_add = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int view_presentations = 2130903043;
 			
 			static Layout()
 			{
@@ -169,7 +181,10 @@ namespace DiplomaSeminar.Droid
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int menu_presentations = 2131165184;
+			public const int menu_add = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int menu_presentations = 2131165185;
 			
 			static Menu()
 			{
@@ -197,7 +212,7 @@ namespace DiplomaSeminar.Droid
 			public const int menu_refresh = 2130968580;
 			
 			// aapt resource value: 0x7f040003
-			public const int menu_save_expense = 2130968579;
+			public const int menu_save_presentation = 2130968579;
 			
 			static String()
 			{

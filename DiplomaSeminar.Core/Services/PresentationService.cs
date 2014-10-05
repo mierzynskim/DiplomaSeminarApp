@@ -12,7 +12,7 @@ namespace DiplomaSeminar.Core.Services
 {
     public class PresentationService: IPresentationService
     {
-        private PresentationDatabase database = null;
+        private readonly PresentationDatabase database;
 
         public PresentationService(SQLiteConnection connection)
         {

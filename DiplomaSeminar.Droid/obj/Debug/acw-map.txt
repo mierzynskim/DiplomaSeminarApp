@@ -1,4 +1,5 @@
 DiplomaSeminar.Droid.DiplomaSeminarApp;diplomaseminar.droid.DiplomaSeminarApp
+DiplomaSeminar.Droid.Views.AddActivity;diplomaseminar.droid.views.AddActivity
 DiplomaSeminar.Droid.Views.PresentationsActivity;diplomaseminar.droid.views.PresentationsActivity
-DiplomaSeminar.Droid.PresentationWrapper;diplomaseminar.droid.PresentationWrapper
-DiplomaSeminar.Droid.PresentationAdapter;diplomaseminar.droid.PresentationAdapter
+DiplomaSeminar.Droid.Adapters.PresentationWrapper;diplomaseminar.droid.adapters.PresentationWrapper
+DiplomaSeminar.Droid.Adapters.PresentationAdapter;diplomaseminar.droid.adapters.PresentationAdapter

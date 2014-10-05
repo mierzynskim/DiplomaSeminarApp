@@ -49,6 +49,7 @@ namespace DiplomaSeminar.Droid.Helpers
 #endif
             ServiceContainer.Register<IPresentationService>(() => new PresentationService(connection));
             ServiceContainer.Register<PresentationsViewModel>();
+            ServiceContainer.Register<AddViewModel>();
         }
     }
 }

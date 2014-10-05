@@ -62,8 +62,9 @@
   <ItemGroup>
     <Compile Include="DiplomaSeminarApp.cs" />
     <Compile Include="Helpers\ServiceRegistrar.cs" />
+    <Compile Include="Views\AddActivity.cs" />
     <Compile Include="Views\PresentationsActivity.cs" />
-    <Compile Include="PresentationAdapter.cs" />
+    <Compile Include="Adapters\PresentationAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,6 +76,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\view_presentations.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\view_add.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -109,6 +113,8 @@
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\menu\menu_presentations.xml" />
+    <AndroidResource Include="Resources\menu\menu_add.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DiplomaSeminar.Core\DiplomaSeminar.Core.csproj">

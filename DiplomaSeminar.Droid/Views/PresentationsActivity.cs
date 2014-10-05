@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using DiplomaSeminar.Core.Helpers;
 using DiplomaSeminar.Core.ViewModels;
+using DiplomaSeminar.Droid.Adapters;
 
 namespace DiplomaSeminar.Droid.Views
 {
@@ -62,10 +63,10 @@ namespace DiplomaSeminar.Droid.Views
 
         protected override void OnListItemClick(ListView l, View v, int position, long id)
         {
-            //base.OnListItemClick(l, v, position, id);
-            //var intent = new Intent(this, typeof(ExpenseActivity));
-            //intent.PutExtra("ID", (int)id);
-            //StartActivity(intent);
+            base.OnListItemClick(l, v, position, id);
+            var intent = new Intent(this, typeof(AddActivity));
+            intent.PutExtra("ID", (int)id);
+            StartActivity(intent);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -79,8 +80,8 @@ namespace DiplomaSeminar.Droid.Views
             switch (item.ItemId)
             {
                 case (Resource.Id.menu_new_presentation):
-                    //var intent = new Intent(this, typeof(ExpenseActivity));
-                    //StartActivity(intent);
+                    var intent = new Intent(this, typeof(AddActivity));
+                    StartActivity(intent);
                     return true;
                 case Resource.Id.menu_refresh:
                     Sync();

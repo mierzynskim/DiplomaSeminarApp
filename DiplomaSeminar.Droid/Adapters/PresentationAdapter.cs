@@ -1,11 +1,10 @@
-
 using Android.App;
 using Android.Views;
 using Android.Widget;
 using DiplomaSeminar.Core.ViewModels;
 using Presentation = DiplomaSeminar.Core.Model.Presentation;
 
-namespace DiplomaSeminar.Droid
+namespace DiplomaSeminar.Droid.Adapters
 {
     public class PresentationWrapper : Java.Lang.Object
     {
