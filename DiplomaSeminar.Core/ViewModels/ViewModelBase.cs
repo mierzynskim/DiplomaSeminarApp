@@ -33,17 +33,5 @@ namespace DiplomaSeminar.Core.ViewModels
                     IsBusyChanged(isBusy);
             }
         }
-        private bool canLoadMore;
-
-        public bool CanLoadMore
-        {
-            get { return canLoadMore; }
-            set
-            {
-                canLoadMore = value;
-                OnPropertyChanged("CanLoadMore");
-            }
-        }
-
     }
 }

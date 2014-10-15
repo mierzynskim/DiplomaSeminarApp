@@ -38,11 +38,8 @@ namespace DiplomaSeminar.Droid.Views
             //    RunOnUiThread(() => ((ExpenseAdapter)ListAdapter).NotifyDataSetChanged());
             //};
 
-            if (!viewModel.IsSynced)
-            {
-                await viewModel.ExecuteSyncExpensesCommand();
-                RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
-            }
+            await viewModel.ExecuteSyncExpensesCommand();
+            RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
 
         }
 
@@ -52,9 +49,7 @@ namespace DiplomaSeminar.Droid.Views
 
             DiplomaSeminarApp.CurrentActivity = this;
 
-
-
-            if (viewModel.NeedsUpdate && viewModel.IsSynced)
+            if (viewModel.NeedsUpdate)
             {
                 await viewModel.ExecuteLoadPresentationsCommand();
                 RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());

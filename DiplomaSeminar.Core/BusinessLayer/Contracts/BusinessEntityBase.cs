@@ -9,9 +9,6 @@ namespace DiplomaSeminar.Core.BusinessLayer.Contracts
         {
         }
 
-        /// <summary>
-        /// Gets or sets the Database ID.
-        /// </summary>
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 

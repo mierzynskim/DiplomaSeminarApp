@@ -70,7 +70,6 @@ namespace DiplomaSeminar.Core.ViewModels
             get { return loadPresentationsCommand ?? (loadPresentationsCommand = new RelayCommand(async () => await ExecuteLoadPresentationsCommand())); }
         }
 
-        public bool IsSynced { get; set; }
 
         public async Task ExecuteLoadPresentationsCommand()
         {
