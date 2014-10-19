@@ -12,6 +12,6 @@ namespace DiplomaSeminar.Core.Interfaces
         Task<Presentation> GetPresentation(int id);
         Task<IEnumerable<Presentation>> GetPresentations();
         Task<Presentation> SavePresentation(Presentation presentation);
-        Task<Presentation> DeletePresentation(int id);
+        Task DeletePresentation(int id);
     }
 }

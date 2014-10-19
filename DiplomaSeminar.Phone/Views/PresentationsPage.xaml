@@ -48,7 +48,6 @@
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-
                             <StackPanel Margin="0,0,0,17"  VerticalAlignment="Center">
                                 <TextBlock Text="{Binding Subject}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextLargeStyle}" />
                                 <StackPanel Orientation="Horizontal">
@@ -59,7 +58,7 @@
                             </StackPanel>
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu IsZoomEnabled="True" x:Name="ContextMenu" >
-                                    <toolkit:MenuItem x:Name="Delete" Header="delete" />
+                                    <toolkit:MenuItem x:Name="Delete" Header="delete" Click="DeleteOnClick" />
                                 </toolkit:ContextMenu>
                             </toolkit:ContextMenuService.ContextMenu>
                         </Grid>

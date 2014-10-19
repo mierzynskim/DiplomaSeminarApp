@@ -29,11 +29,13 @@ namespace DiplomaSeminar.Droid.Adapters
             if (convertView == null)
             {
                 view = context.LayoutInflater.Inflate(Resource.Layout.item_presentation, null);
-                wrapper = new PresentationWrapper();
-                wrapper.SpeakerName = view.FindViewById<TextView>(Resource.Id.name);
-                wrapper.SpeakerLastName = view.FindViewById<TextView>(Resource.Id.lastName);
-                wrapper.Date = view.FindViewById<TextView>(Resource.Id.date);
-                wrapper.Subject = view.FindViewById<TextView>(Resource.Id.subject);
+                wrapper = new PresentationWrapper
+                {
+                    SpeakerName = view.FindViewById<TextView>(Resource.Id.name),
+                    SpeakerLastName = view.FindViewById<TextView>(Resource.Id.lastName),
+                    Date = view.FindViewById<TextView>(Resource.Id.date),
+                    Subject = view.FindViewById<TextView>(Resource.Id.subject)
+                };
                 view.Tag = wrapper;
             }
             else

@@ -39,9 +39,12 @@ namespace DiplomaSeminar.Core.Services
             });
         }
 
-        public Task<Presentation> DeletePresentation(int id)
+        public async Task DeletePresentation(int id)
         {
-            throw new NotImplementedException();
+            await Task.Factory.StartNew(() =>
+            {
+                database.DeleteItem<Presentation>(id);
+            });
         }
     }
 }

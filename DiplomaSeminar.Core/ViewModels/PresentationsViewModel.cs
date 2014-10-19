@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using DiplomaSeminar.Core.Helpers;
@@ -51,18 +52,6 @@ namespace DiplomaSeminar.Core.ViewModels
             }
         }
 
-        private RelayCommand syncPresentationsCommand;
-
-        public ICommand SyncPresentationsCommand
-        {
-            get { return syncPresentationsCommand ?? (syncPresentationsCommand = new RelayCommand(async () => await ExecuteSyncPresentationsCommand())); }
-        }
-
-        public async Task ExecuteSyncPresentationsCommand()
-        {
-            await UpdatePresentations();
-        }
-
         private RelayCommand loadPresentationsCommand;
 
         public ICommand LoadPresentationsCommand
@@ -78,6 +67,35 @@ namespace DiplomaSeminar.Core.ViewModels
 
             IsBusy = true;
             await UpdatePresentations();
+        }
+
+        private RelayCommand<Presentation> deletePresentationCommand;
+
+        public ICommand DeletePresentationCommand
+        {
+            get { return deletePresentationCommand ?? (deletePresentationCommand = new RelayCommand<Presentation>(async (item) => await ExecuteDeletePresentationCommand(item))); }
+        }
+
+        public async Task ExecuteDeletePresentationCommand(Presentation presentation)
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+            try
+            {
+
+                await presentationService.DeletePresentation(presentation.Id);
+                Presentations.Remove(Presentations.FirstOrDefault(ex => ex.Id == presentation.Id));
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Unable to delete presentation");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
     }
 }

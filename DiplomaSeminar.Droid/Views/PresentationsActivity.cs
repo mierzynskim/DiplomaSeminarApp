@@ -32,13 +32,13 @@ namespace DiplomaSeminar.Droid.Views
 
             ListAdapter = new PresentationAdapter(this, viewModel);
 
-            //ListView.ItemLongClick += async (sender, args) =>
-            //{
-            //    await viewModel.ExecuteDeleteExpenseCommand(viewModel.Expenses[args.Position]);
-            //    RunOnUiThread(() => ((ExpenseAdapter)ListAdapter).NotifyDataSetChanged());
-            //};
+            ListView.ItemLongClick += async (sender, args) =>
+            {
+                await viewModel.ExecuteDeletePresentationCommand(viewModel.Presentations[args.Position]);
+                RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
+            };
 
-            await viewModel.ExecuteSyncPresentationsCommand();
+            await viewModel.ExecuteLoadPresentationsCommand();
             RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
 
         }
@@ -87,7 +87,7 @@ namespace DiplomaSeminar.Droid.Views
 
         private async Task Sync()
         {
-            await viewModel.ExecuteSyncPresentationsCommand();
+            await viewModel.ExecuteLoadPresentationsCommand();
             RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
         }
     }

@@ -42,10 +42,10 @@
                 <TextBlock TextWrapping="Wrap" Text="Subject" Style="{StaticResource PhoneTextNormalStyle}"/>
                 <TextBox Height="72" TextWrapping="Wrap" Text="{Binding Subject, Mode=TwoWay}"/>
                 
-                <TextBlock TextWrapping="Wrap" Text="Speaker's name" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock TextWrapping="Wrap" Text="Name" Style="{StaticResource PhoneTextNormalStyle}"/>
                 <TextBox Height="72" TextWrapping="Wrap" Text="{Binding SpeakerName, Mode=TwoWay}"/>
 
-                <TextBlock TextWrapping="Wrap" Text="Speaker's last name" Style="{StaticResource PhoneTextNormalStyle}"/>
+                <TextBlock TextWrapping="Wrap" Text="Last name" Style="{StaticResource PhoneTextNormalStyle}"/>
                 <TextBox Height="72" TextWrapping="Wrap" Text="{Binding SpeakerLastName, Mode=TwoWay}"/>
 
                 <TextBlock TextWrapping="Wrap" Text="Date" Style="{StaticResource PhoneTextNormalStyle}"/>

@@ -17,7 +17,6 @@ C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\android\bin\Di
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\layout\item_presentation.xml
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\layout\view_presentations.xml
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\layout\view_add.xml
-C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\layout\main.xml
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\values\strings.xml
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\drawable\icon.png
 C:\Projects\Xamarin\DiplomaSeminar\DiplomaSeminar.Droid\obj\Debug\res\drawable-xxhdpi\ic_action_content_new.png

@@ -26,6 +26,12 @@ namespace DiplomaSeminar.Phone.Views
             Loaded += OnLoaded;
         }
 
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (viewModel.NeedsUpdate)
+                viewModel.LoadPresentationsCommand.Execute(null);
+        }
+
         private void LongListSelectorSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (MainLongListSelector.SelectedItem == null)
@@ -45,12 +51,12 @@ namespace DiplomaSeminar.Phone.Views
                 return;
             loaded = true;
 
-            await viewModel.ExecuteSyncPresentationsCommand();
+            await viewModel.ExecuteLoadPresentationsCommand();
         }
 
         private void RefreshButtonOnClick(object sender, EventArgs e)
         {
-            viewModel.SyncPresentationsCommand.Execute(null);
+            viewModel.LoadPresentationsCommand.Execute(null);
         }
 
         private void NewPresentationOnClick(object sender, EventArgs e)
@@ -60,6 +66,20 @@ namespace DiplomaSeminar.Phone.Views
 
             NavigationService.Navigate(new Uri("/Views/AddPage.xaml", UriKind.Relative));
 
+        }
+
+        private void DeleteOnClick(object sender, RoutedEventArgs e)
+        {
+            if (viewModel.IsBusy)
+                return;
+
+            var menuItem = sender as MenuItem;
+
+            if (menuItem == null) return;
+            var selected = menuItem.DataContext as Presentation;
+            if (selected == null)
+                return;
+            viewModel.DeletePresentationCommand.Execute(selected);
         }
     }
 }
