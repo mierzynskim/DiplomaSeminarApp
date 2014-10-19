@@ -78,17 +78,8 @@ namespace DiplomaSeminar.Droid.Views
                     var intent = new Intent(this, typeof(AddActivity));
                     StartActivity(intent);
                     return true;
-                case Resource.Id.menu_refresh:
-                    Sync();
-                    return true;
             }
             return base.OnOptionsItemSelected(item);
-        }
-
-        private async Task Sync()
-        {
-            await viewModel.ExecuteLoadPresentationsCommand();
-            RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
         }
     }
 }

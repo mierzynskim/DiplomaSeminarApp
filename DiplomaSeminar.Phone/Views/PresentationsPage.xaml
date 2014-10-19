@@ -19,7 +19,6 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar>
             <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/add.png" IsEnabled="True" Text="new" x:Name="NewPresentationAppButton" Click="NewPresentationOnClick" />
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" IsEnabled="True" Text="refresh" x:Name="RefreshButton" Click="RefreshButtonOnClick" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 
@@ -49,6 +48,7 @@
                     <DataTemplate>
                         <Grid>
                             <StackPanel Margin="0,0,0,17"  VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Id}" Visibility="Collapsed"></TextBlock>
                                 <TextBlock Text="{Binding Subject}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextLargeStyle}" />
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding SpeakerName}"  TextWrapping="NoWrap" Style="{StaticResource PhoneTextNormalStyle}"/>

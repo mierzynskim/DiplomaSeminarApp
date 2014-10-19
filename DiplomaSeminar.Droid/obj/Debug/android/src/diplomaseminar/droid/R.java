@@ -29,7 +29,6 @@ public final class R {
         public static final int date=0x7f080003;
         public static final int lastName=0x7f080002;
         public static final int menu_new_presentation=0x7f080008;
-        public static final int menu_refresh=0x7f080009;
         public static final int menu_save_presentation=0x7f080007;
         public static final int name=0x7f080001;
         public static final int progressBar=0x7f080006;

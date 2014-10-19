@@ -121,9 +121,6 @@ namespace DiplomaSeminar.Droid
 			// aapt resource value: 0x7f080008
 			public const int menu_new_presentation = 2131230728;
 			
-			// aapt resource value: 0x7f080009
-			public const int menu_refresh = 2131230729;
-			
 			// aapt resource value: 0x7f080007
 			public const int menu_save_presentation = 2131230727;
 			

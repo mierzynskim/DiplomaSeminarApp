@@ -17,6 +17,7 @@ namespace DiplomaSeminar.Phone.Views
     {
         private readonly PresentationsViewModel viewModel;
         private bool loaded;
+        private int clickedId;
         public PresentationsPage()
         {
             InitializeComponent();
@@ -39,8 +40,8 @@ namespace DiplomaSeminar.Phone.Views
 
             if (viewModel.IsBusy)
                 return;
-
-            NavigationService.Navigate(new Uri("/Views/AddPage.xaml?selectedItem=" + (MainLongListSelector.SelectedItem as Presentation).Id, UriKind.Relative));
+            clickedId = (MainLongListSelector.SelectedItem as Presentation).Id;
+            NavigationService.Navigate(new Uri("/Views/AddPage.xaml?selectedItem=" + clickedId, UriKind.Relative));
 
             MainLongListSelector.SelectedItem = null;
         }
@@ -52,11 +53,6 @@ namespace DiplomaSeminar.Phone.Views
             loaded = true;
 
             await viewModel.ExecuteLoadPresentationsCommand();
-        }
-
-        private void RefreshButtonOnClick(object sender, EventArgs e)
-        {
-            viewModel.LoadPresentationsCommand.Execute(null);
         }
 
         private void NewPresentationOnClick(object sender, EventArgs e)
@@ -74,11 +70,12 @@ namespace DiplomaSeminar.Phone.Views
                 return;
 
             var menuItem = sender as MenuItem;
-
+            //var list = MainLongListSelector.ItemsSource;
             if (menuItem == null) return;
             var selected = menuItem.DataContext as Presentation;
             if (selected == null)
                 return;
+            selected.Id++;
             viewModel.DeletePresentationCommand.Execute(selected);
         }
     }
