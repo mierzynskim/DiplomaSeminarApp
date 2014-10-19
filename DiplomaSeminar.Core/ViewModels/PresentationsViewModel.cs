@@ -55,10 +55,10 @@ namespace DiplomaSeminar.Core.ViewModels
 
         public ICommand SyncPresentationsCommand
         {
-            get { return syncPresentationsCommand ?? (syncPresentationsCommand = new RelayCommand(async () => await ExecuteSyncExpensesCommand())); }
+            get { return syncPresentationsCommand ?? (syncPresentationsCommand = new RelayCommand(async () => await ExecuteSyncPresentationsCommand())); }
         }
 
-        public async Task ExecuteSyncExpensesCommand()
+        public async Task ExecuteSyncPresentationsCommand()
         {
             await UpdatePresentations();
         }

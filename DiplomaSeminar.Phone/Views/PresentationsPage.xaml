@@ -15,11 +15,11 @@
     <phone:PhoneApplicationPage.Resources>
         <converters:BooleanToVisibilityConverter x:Key="VisibilityConverter" />
     </phone:PhoneApplicationPage.Resources>
-    
+
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/add.png" IsEnabled="True" Text="new" x:Name="NewExpenseAppButton" />
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" IsEnabled="True" Text="refresh" x:Name="RefreshButton" />
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/add.png" IsEnabled="True" Text="new" x:Name="NewPresentationAppButton" Click="NewPresentationOnClick" />
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/refresh.png" IsEnabled="True" Text="refresh" x:Name="RefreshButton" Click="RefreshButtonOnClick" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 
@@ -32,7 +32,6 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush"/>
     </phone:PhoneApplicationPage.Foreground>
-    <!--Data context is set to sample data above and LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -45,18 +44,18 @@
         </StackPanel>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Expenses}">
+            <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Presentations}" SelectionChanged="LongListSelectorSelectionChanged">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width=".25*"/>
-                                <ColumnDefinition Width=".75*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding TotalDisplay}" VerticalAlignment="Center" HorizontalAlignment="Right" TextWrapping="NoWrap" Style="{StaticResource PhoneTextAccentStyle}" />
-                            <StackPanel Margin="0,0,0,17" Grid.Column="2" VerticalAlignment="Center">
-                                <TextBlock Text="{Binding Name}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextLargeStyle}"/>
-                                <TextBlock Text="{Binding DueDateLongDisplay}" TextWrapping="NoWrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+
+                            <StackPanel Margin="0,0,0,17"  VerticalAlignment="Center">
+                                <TextBlock Text="{Binding Subject}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextLargeStyle}" />
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding SpeakerName}"  TextWrapping="NoWrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                                    <TextBlock Text="{Binding SpeakerLastName}" TextWrapping="NoWrap" Style="{StaticResource PhoneTextNormalStyle}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding Date}" TextWrapping="NoWrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
                             </StackPanel>
                             <toolkit:ContextMenuService.ContextMenu>
                                 <toolkit:ContextMenu IsZoomEnabled="True" x:Name="ContextMenu" >

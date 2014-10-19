@@ -38,7 +38,7 @@ namespace DiplomaSeminar.Droid.Views
             //    RunOnUiThread(() => ((ExpenseAdapter)ListAdapter).NotifyDataSetChanged());
             //};
 
-            await viewModel.ExecuteSyncExpensesCommand();
+            await viewModel.ExecuteSyncPresentationsCommand();
             RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
 
         }
@@ -87,7 +87,7 @@ namespace DiplomaSeminar.Droid.Views
 
         private async Task Sync()
         {
-            await viewModel.ExecuteSyncExpensesCommand();
+            await viewModel.ExecuteSyncPresentationsCommand();
             RunOnUiThread(() => ((PresentationAdapter)ListAdapter).NotifyDataSetChanged());
         }
     }
