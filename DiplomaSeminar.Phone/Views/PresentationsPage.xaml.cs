@@ -75,7 +75,7 @@ namespace DiplomaSeminar.Phone.Views
             var selected = menuItem.DataContext as Presentation;
             if (selected == null)
                 return;
-            selected.Id++;
+
             viewModel.DeletePresentationCommand.Execute(selected);
         }
     }
