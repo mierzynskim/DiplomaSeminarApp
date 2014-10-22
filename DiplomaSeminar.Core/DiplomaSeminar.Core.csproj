@@ -43,7 +43,7 @@
     <Compile Include="Helpers\ServiceContainer.cs" />
     <Compile Include="Interfaces\IBusinessEntity.cs" />
     <Compile Include="Interfaces\IPresentationService.cs" />
-    <Compile Include="Model\Presentation.cs" />
+    <Compile Include="BusinessLayer\Model\Presentation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PresentationService.cs" />
     <Compile Include="ViewModels\AddViewModel.cs" />

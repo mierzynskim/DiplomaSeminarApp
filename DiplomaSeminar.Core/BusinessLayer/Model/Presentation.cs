@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DiplomaSeminar.Core.BusinessLayer.Contracts;
-using DiplomaSeminar.Core.Interfaces;
 
-namespace DiplomaSeminar.Core.Model
+namespace DiplomaSeminar.Core.BusinessLayer.Model
 {
     public class Presentation : BusinessEntityBase
     {

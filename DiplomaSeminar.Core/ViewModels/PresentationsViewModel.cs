@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using DiplomaSeminar.Core.BusinessLayer.Model;
 using DiplomaSeminar.Core.Helpers;
 using DiplomaSeminar.Core.Interfaces;
-using DiplomaSeminar.Core.Model;
 
 namespace DiplomaSeminar.Core.ViewModels
 {

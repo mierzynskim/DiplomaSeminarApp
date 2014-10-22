@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DiplomaSeminar.Core.BusinessLayer.Model;
 using DiplomaSeminar.Core.DataLayer;
 using DiplomaSeminar.Core.Interfaces;
-using DiplomaSeminar.Core.Model;
 using SQLite.Net;
 
 namespace DiplomaSeminar.Core.Services

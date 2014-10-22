@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DiplomaSeminar.Core.Model;
+using DiplomaSeminar.Core.BusinessLayer.Model;
 
 namespace DiplomaSeminar.Core.Interfaces
 {
